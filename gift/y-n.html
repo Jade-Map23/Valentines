@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>VALENTINES</title>
+    <link rel="stylesheet" href="val.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+  
+    <div class="question">
+        <h1>WILL <b>YOU</b> BE MY VALENTINE?</h1>
+        <div class="buttons">
+            <a href="index.html" class="butt-yes">YES</a>
+            <button id="movingButton" onclick="moveButton()">NO</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const movingButton = document.getElementById('movingButton');
+            const maxWidth = window.innerWidth - movingButton.clientWidth;
+            const maxHeight = window.innerHeight - movingButton.clientHeight;
+        
+            const randomLeft = Math.random() * maxWidth;
+            const randomTop = Math.random() * maxHeight;
+        
+            movingButton.style.left = randomLeft + 'px';
+            movingButton.style.top = randomTop + 'px';
+        }
+    </script>
+</body>
